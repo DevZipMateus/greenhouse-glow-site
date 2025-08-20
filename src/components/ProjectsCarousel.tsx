@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -8,8 +7,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const ProjectsCarousel = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
+
   const projectImages = [
     {
       src: "/lovable-uploads/galeria/503299822_17852381223461512_8619531566400650503_n.webp",
@@ -77,7 +81,12 @@ const ProjectsCarousel = () => {
 
         {/* Carousel */}
         <div className="flex justify-center">
-          <Carousel className="w-full max-w-6xl">
+          <Carousel 
+            plugins={[plugin.current]}
+            className="w-full max-w-6xl"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
             <CarouselContent className="-ml-2 md:-ml-4">
               {projectImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
