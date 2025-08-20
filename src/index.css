@@ -1,96 +1,75 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sistema de Design - RC Montagem de Estufas Agrícolas
+Paleta: 60% areia, 30% verde, 10% marrom */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 25% 96%; /* Areia muito clara */
+    --foreground: 25 15% 15%; /* Marrom escuro */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 145 65% 35%; /* Verde agricultura */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 25% 85%; /* Areia clara */
+    --secondary-foreground: 25 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 90%; /* Areia muito clara */
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 35% 45%; /* Marrom terroso */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 145 65% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Cores customizadas para agricultura */
+    --earth: 25 35% 45%; /* Marrom terra */
+    --earth-light: 25 25% 65%;
+    --earth-dark: 25 45% 25%;
+    
+    --nature: 145 65% 35%; /* Verde natura */
+    --nature-light: 145 45% 55%;
+    --nature-dark: 145 75% 25%;
+    
+    --sand: 35 25% 85%; /* Areia */
+    --sand-light: 35 20% 92%;
+    --sand-dark: 35 30% 75%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 25 15% 8%;
+    --foreground: 35 20% 92%;
+    --card: 25 15% 10%;
+    --card-foreground: 35 20% 92%;
+    --popover: 25 15% 10%;
+    --popover-foreground: 35 20% 92%;
+    --primary: 145 65% 45%;
+    --primary-foreground: 25 15% 8%;
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 35 20% 92%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 35 35% 65%;
+    --accent-foreground: 25 15% 8%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 145 65% 45%;
   }
 }
 
@@ -100,6 +79,116 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+
+  /* Smooth scrolling para navegação por âncoras */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Componentes customizados para agricultura */
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      hsl(var(--nature)) 0%, 
+      hsl(var(--nature-dark)) 50%, 
+      hsl(var(--earth)) 100%);
+  }
+  
+  .earth-gradient {
+    background: linear-gradient(90deg, 
+      hsl(var(--earth-light)) 0%, 
+      hsl(var(--earth)) 100%);
+  }
+  
+  .nature-gradient {
+    background: linear-gradient(90deg, 
+      hsl(var(--nature-light)) 0%, 
+      hsl(var(--nature)) 100%);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-6;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Botões customizados */
+  .btn-hero {
+    @apply bg-white/10 text-white border border-white/60 
+           hover:bg-white hover:text-primary hover:border-white
+           focus:bg-white focus:text-primary focus:border-white
+           active:bg-white/90 active:text-primary
+           transition-all duration-300 rounded-lg px-6 py-3 font-semibold;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground border border-primary
+           hover:bg-primary/90 hover:border-primary/90
+           focus:bg-primary/90 focus:border-primary/90
+           active:bg-primary/80
+           transition-all duration-300 rounded-lg px-6 py-3 font-semibold;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary/60 text-foreground border border-secondary
+           hover:bg-secondary hover:border-secondary
+           focus:bg-secondary focus:border-secondary
+           active:bg-secondary/80
+           transition-all duration-300 rounded-lg px-6 py-3 font-semibold;
+  }
+
+  .btn-outline {
+    @apply bg-primary/10 text-primary border border-primary/60
+           hover:bg-primary hover:text-primary-foreground hover:border-primary
+           focus:bg-primary focus:text-primary-foreground focus:border-primary
+           active:bg-primary/90 active:text-primary-foreground
+           transition-all duration-300 rounded-lg px-6 py-3 font-semibold;
+  }
+
+  /* Cards com efeitos */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm
+           hover:shadow-lg hover:border-primary/30 hover:-translate-y-1
+           transition-all duration-300;
+  }
+
+  /* WhatsApp floating button */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 
+           bg-green-500 text-white rounded-full p-4 shadow-lg
+           hover:bg-green-600 hover:scale-110
+           focus:bg-green-600 focus:scale-110
+           active:bg-green-700
+           transition-all duration-300;
+  }
+}
+
+/* Animações customizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
