@@ -18,11 +18,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24 lg:pt-20">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/lovable-uploads/f7b283c8-2d5a-4cc5-b06c-e44a4c90eb36.png')" }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ 
+          backgroundImage: "url('/lovable-uploads/f7b283c8-2d5a-4cc5-b06c-e44a4c90eb36.png')",
+          backgroundPosition: 'center 10%'
+        }}
       ></div>
       
       {/* Overlay for better text readability */}
@@ -30,8 +33,8 @@ const Hero = () => {
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-4 sm:top-10 md:top-20 left-4 sm:left-8 lg:left-20 w-8 sm:w-16 md:w-32 h-8 sm:h-16 md:h-32 border border-white/30 rounded-full animate-float"></div>
-        <div className="absolute top-8 sm:top-20 md:top-40 right-4 sm:right-8 lg:right-32 w-6 sm:w-12 md:w-24 h-6 sm:h-12 md:h-24 border border-white/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-8 sm:top-16 md:top-24 left-4 sm:left-8 lg:left-20 w-8 sm:w-16 md:w-32 h-8 sm:h-16 md:h-32 border border-white/30 rounded-full animate-float"></div>
+        <div className="absolute top-12 sm:top-24 md:top-44 right-4 sm:right-8 lg:right-32 w-6 sm:w-12 md:w-24 h-6 sm:h-12 md:h-24 border border-white/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-8 sm:bottom-16 md:bottom-32 left-1/4 sm:left-1/3 w-5 sm:w-10 md:w-20 h-5 sm:h-10 md:h-20 border border-white/25 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
