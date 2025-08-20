@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Shield, Wrench, Sprout } from 'lucide-react';
 
@@ -91,21 +90,20 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual Element */}
+          {/* Video Element */}
           <div className="relative">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="aspect-square bg-gradient-to-br from-white/20 to-white/5 rounded-xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                    <Sprout className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-white">Estruturas Modernas</h3>
-                    <p className="text-sm text-white/80">
-                      Tecnologia avançada para máxima eficiência
-                    </p>
-                  </div>
-                </div>
+              <div className="aspect-video bg-gradient-to-br from-white/20 to-white/5 rounded-xl overflow-hidden">
+                <video 
+                  className="w-full h-full object-cover rounded-xl"
+                  controls
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/lovable-uploads/galeria/videos/cortina.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
               </div>
             </div>
             
