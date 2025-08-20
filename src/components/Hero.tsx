@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { ArrowRight, Shield, Wrench, Sprout } from 'lucide-react';
 
@@ -18,7 +19,16 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/lovable-uploads/f7b283c8-2d5a-4cc5-b06c-e44a4c90eb36.png')" }}
+      ></div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white/30 rounded-full animate-float"></div>
@@ -26,7 +36,7 @@ const Hero = () => {
         <div className="absolute bottom-32 left-1/3 w-20 h-20 border border-white/25 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container-custom relative">
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-white space-y-8">
@@ -119,3 +129,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
