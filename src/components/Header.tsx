@@ -18,13 +18,20 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-xl font-heading font-bold text-primary">
-              RC Montagem
-            </h1>
-            <p className="text-xs text-muted-foreground -mt-1">
-              Estufas Agrícolas
-            </p>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/8e7e669f-38c9-463d-b0e5-2cd2ca2e4a86.png" 
+              alt="RC Montagem e Manutenção de Estufas Agrícolas"
+              className="h-10 w-auto"
+            />
+            <div className="flex-shrink-0">
+              <h1 className="text-xl font-heading font-bold text-primary">
+                RC Montagem
+              </h1>
+              <p className="text-xs text-muted-foreground -mt-1">
+                Estufas Agrícolas
+              </p>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
