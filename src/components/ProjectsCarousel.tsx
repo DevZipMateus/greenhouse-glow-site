@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -7,11 +8,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import Autoplay from "embla-carousel-autoplay"
 
 const ProjectsCarousel = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   )
 
   const projectImages = [
@@ -84,25 +86,36 @@ const ProjectsCarousel = () => {
           <Carousel 
             plugins={[plugin.current]}
             className="w-full max-w-6xl"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {projectImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div className="p-1">
-                    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                      <CardContent className="p-0">
-                        <div className="aspect-square overflow-hidden">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                          <CardContent className="p-0">
+                            <div className="aspect-square overflow-hidden">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+                              />
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+                        <div className="relative">
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            loading="lazy"
+                            className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
                           />
                         </div>
-                      </CardContent>
-                    </Card>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </CarouselItem>
               ))}
