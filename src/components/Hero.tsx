@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Shield, Wrench, Sprout } from 'lucide-react';
 
@@ -96,7 +97,7 @@ const Hero = () => {
               <div className="aspect-video bg-gradient-to-br from-white/20 to-white/5 rounded-xl overflow-hidden">
                 <video 
                   className="w-full h-full object-cover rounded-xl"
-                  controls
+                  autoPlay
                   muted
                   loop
                   playsInline
