@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import ProjectsCarousel from '../components/ProjectsCarousel';
 import About from '../components/About';
 import Services from '../components/Services';
 import Contact from '../components/Contact';
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <ProjectsCarousel />
         <About />
         <Services />
         <Contact />
