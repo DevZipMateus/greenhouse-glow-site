@@ -15,61 +15,61 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
             <img 
               src="/lovable-uploads/8e7e669f-38c9-463d-b0e5-2cd2ca2e4a86.png" 
               alt="RC Montagem e Manutenção de Estufas Agrícolas"
-              className="h-10 w-auto"
+              className="h-8 sm:h-10 w-auto flex-shrink-0"
             />
-            <div className="flex-shrink-0">
-              <h1 className="text-xl font-heading font-bold text-primary">
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-xl font-heading font-bold text-primary truncate">
                 RC Montagem
               </h1>
-              <p className="text-xs text-muted-foreground -mt-1">
+              <p className="text-xs text-muted-foreground -mt-1 truncate">
                 Estufas Agrícolas
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200"
             >
               Início
             </button>
             <button
               onClick={() => scrollToSection('sobre')}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection('servicos')}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200"
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection('projetos')}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200"
             >
               Projetos
             </button>
             <button
               onClick={() => scrollToSection('contato')}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200"
             >
               Contato
             </button>
           </nav>
 
           {/* Contact Info - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             <a
               href="tel:19998167642"
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -91,57 +91,57 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-white/95">
-            <nav className="flex flex-col space-y-3">
+            <nav className="flex flex-col space-y-2">
               <button
                 onClick={() => scrollToSection('inicio')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded"
+                className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded text-base"
               >
                 Início
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded"
+                className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded text-base"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection('servicos')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded"
+                className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded text-base"
               >
                 Serviços
               </button>
               <button
                 onClick={() => scrollToSection('projetos')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded"
+                className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded text-base"
               >
                 Projetos
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded"
+                className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-colors rounded text-base"
               >
                 Contato
               </button>
               
               {/* Mobile Contact Info */}
-              <div className="px-4 pt-4 border-t border-border space-y-2">
+              <div className="px-4 pt-4 border-t border-border space-y-3">
                 <a
                   href="tel:19998167642"
-                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary"
+                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary py-2"
                 >
                   <Phone className="h-4 w-4" />
                   <span>(19) 99816-7642</span>
                 </a>
                 <a
                   href="mailto:contato.rcmontagens@gmail.com"
-                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary"
+                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary py-2"
                 >
                   <Mail className="h-4 w-4" />
                   <span>contato.rcmontagens@gmail.com</span>

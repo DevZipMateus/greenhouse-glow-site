@@ -68,14 +68,14 @@ const ProjectsCarousel = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
-      <div className="container-custom">
+    <section id="projetos" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+        <div className="text-center space-y-4 mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground">
             Alguns de Nossos Projetos
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Confira alguns dos projetos que realizamos para nossos clientes, 
             demonstrando nossa experiência e qualidade em estufas agrícolas.
           </p>
@@ -85,11 +85,11 @@ const ProjectsCarousel = () => {
         <div className="flex justify-center">
           <Carousel 
             plugins={[plugin.current]}
-            className="w-full max-w-6xl"
+            className="w-full max-w-7xl"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {projectImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-4/5 xs:basis-3/4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div className="p-1">
                     <Dialog>
                       <DialogTrigger asChild>
@@ -106,7 +106,7 @@ const ProjectsCarousel = () => {
                           </CardContent>
                         </Card>
                       </DialogTrigger>
-                      <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+                      <DialogContent className="max-w-[95vw] sm:max-w-4xl w-full p-2 sm:p-4 bg-transparent border-none">
                         <div className="relative">
                           <img
                             src={image.src}
@@ -120,8 +120,8 @@ const ProjectsCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="hidden sm:flex -left-8 lg:-left-12" />
+            <CarouselNext className="hidden sm:flex -right-8 lg:-right-12" />
           </Carousel>
         </div>
       </div>
