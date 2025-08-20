@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
 
 const WhatsAppFloat = () => {
   return (
@@ -11,7 +10,11 @@ const WhatsAppFloat = () => {
       className="whatsapp-float group"
       aria-label="Falar no WhatsApp"
     >
-      <MessageCircle className="h-6 w-6" />
+      <img 
+        src="/lovable-uploads/b7ac5b9c-a531-44d9-82bd-a287e2e80afb.png" 
+        alt="WhatsApp" 
+        className="h-8 w-8"
+      />
       
       {/* Tooltip */}
       <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">

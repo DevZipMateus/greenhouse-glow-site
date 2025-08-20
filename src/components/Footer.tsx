@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -77,7 +77,11 @@ const Footer = () => {
                 href="https://wa.me/5519998167642"
                 className="flex items-center space-x-2 text-sm sm:text-base text-background/70 hover:text-background transition-colors"
               >
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                <img 
+                  src="/lovable-uploads/b7ac5b9c-a531-44d9-82bd-a287e2e80afb.png" 
+                  alt="WhatsApp" 
+                  className="h-4 w-4 flex-shrink-0"
+                />
                 <span>(19) 99816-7642</span>
               </a>
               <a
